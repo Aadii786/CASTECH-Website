@@ -95,22 +95,22 @@ export default function StudentHome() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
-                title: "B.Sc. Computer Science", 
+                title: "BS Computer Science", 
                 dept: "Technology", 
                 img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
-                desc: "Master software engineering, AI, and data science with hands-on projects."
+                desc: "Accredited by NCEAC, focusing on AI, Software Engineering, and Data Science."
               },
               { 
-                title: "B.A. Digital Arts", 
+                title: "BS Digital Media", 
                 dept: "Arts", 
                 img: "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&q=80&w=800",
-                desc: "Express your creativity through digital media, animation, and graphic design."
+                desc: "A blend of creativity and technology for the next generation of digital artists."
               },
               { 
-                title: "B.Sc. Biotechnology", 
+                title: "BS Biotechnology", 
                 dept: "Science", 
                 img: "https://images.unsplash.com/photo-1532187863486-abf9d3a4461a?auto=format&fit=crop&q=80&w=800",
-                desc: "Explore the frontiers of biological sciences and genetic engineering."
+                desc: "Explore biological systems and organisms to develop or make products."
               }
             ].map((item, i) => (
               <motion.div
@@ -137,6 +137,50 @@ export default function StudentHome() {
                   </div>
                 </div>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* News & Announcements */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">News & Announcements</h2>
+              <p className="text-gray-600">Stay updated with the latest happenings at CASTECH.</p>
+            </div>
+            <Link to="/student/media" className="text-castech-blue font-bold hover:underline flex items-center gap-1">
+              View All News <ChevronRight className="w-5 h-5" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { 
+                date: "April 05, 2026", 
+                title: "CASTECH Students Win National Tech Challenge", 
+                desc: "Our Computer Science students secured first place in the National Innovation Competition held in Islamabad."
+              },
+              { 
+                date: "March 28, 2026", 
+                title: "New Research Lab Inaugurated", 
+                desc: "The state-of-the-art Biotechnology Research Lab is now open for senior students and faculty research projects."
+              },
+              { 
+                date: "March 15, 2026", 
+                title: "International Collaboration with Global Universities", 
+                desc: "CASTECH has signed MoUs with leading international universities for student exchange programs."
+              }
+            ].map((news, i) => (
+              <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                <span className="text-castech-blue text-sm font-bold mb-3 block">{news.date}</span>
+                <h3 className="text-xl font-bold mb-4">{news.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">{news.desc}</p>
+                <Link to="/student/media" className="text-castech-black font-bold text-sm flex items-center gap-1 hover:text-castech-blue">
+                  Read More <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             ))}
           </div>
         </div>

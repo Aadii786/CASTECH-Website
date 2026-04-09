@@ -94,6 +94,70 @@ export default function Admissions() {
         </div>
       </section>
 
+      {/* Scholarships */}
+      <section id="scholarships" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Scholarships & Financial Aid</h2>
+            <p className="text-gray-600">We believe that financial constraints should not hinder talent.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
+              <h3 className="text-2xl font-bold mb-4 text-castech-blue">Merit Scholarships</h3>
+              <p className="text-gray-600 mb-6">Up to 100% tuition fee waiver for students with exceptional academic records in their previous studies.</p>
+              <ul className="space-y-3 text-sm text-gray-500">
+                <li>• 90% and above: 100% Waiver</li>
+                <li>• 85% - 89.9%: 75% Waiver</li>
+                <li>• 80% - 84.9%: 50% Waiver</li>
+              </ul>
+            </div>
+            <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
+              <h3 className="text-2xl font-bold mb-4 text-castech-blue">Need-Based Financial Aid</h3>
+              <p className="text-gray-600 mb-6">Support for students who demonstrate financial need. Each case is evaluated individually by our financial aid committee.</p>
+              <button className="text-castech-blue font-bold hover:underline">Download Application Form</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fee Structure */}
+      <section id="fee" className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Fee Structure</h2>
+            <p className="text-gray-600">Transparent and competitive fee structure for all our programs.</p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-3xl overflow-hidden shadow-sm">
+              <thead className="bg-castech-dark-blue text-white">
+                <tr>
+                  <th className="px-8 py-6 text-left">Program</th>
+                  <th className="px-8 py-6 text-left">Admission Fee</th>
+                  <th className="px-8 py-6 text-left">Tuition Fee (Per Semester)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr>
+                  <td className="px-8 py-6 font-bold">BS Computer Science</td>
+                  <td className="px-8 py-6 text-gray-600">PKR 25,000</td>
+                  <td className="px-8 py-6 text-gray-600">PKR 185,000</td>
+                </tr>
+                <tr>
+                  <td className="px-8 py-6 font-bold">BS Digital Media</td>
+                  <td className="px-8 py-6 text-gray-600">PKR 25,000</td>
+                  <td className="px-8 py-6 text-gray-600">PKR 165,000</td>
+                </tr>
+                <tr>
+                  <td className="px-8 py-6 font-bold">BS Biotechnology</td>
+                  <td className="px-8 py-6 text-gray-600">PKR 25,000</td>
+                  <td className="px-8 py-6 text-gray-600">PKR 175,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* FAQs */}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

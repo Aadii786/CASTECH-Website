@@ -16,6 +16,8 @@ import StudentLife from './pages/student/StudentLife';
 import Faculty from './pages/student/Faculty';
 import Media from './pages/student/Media';
 import Contact from './pages/student/Contact';
+import StudentPortal from './pages/student/Portal';
+import ProgramDetail from './pages/student/ProgramDetail';
 import InvestorHome from './pages/investor/InvestorHome';
 import Opportunity from './pages/investor/Opportunity';
 import Model from './pages/investor/Model';
@@ -48,11 +50,13 @@ export default function App() {
             <Route path="/student" element={<StudentHome />} />
             <Route path="/student/about" element={<About />} />
             <Route path="/student/programs" element={<Programs />} />
+            <Route path="/student/programs/:id" element={<ProgramDetail />} />
             <Route path="/student/admissions" element={<Admissions />} />
             <Route path="/student/life" element={<StudentLife />} />
             <Route path="/student/faculty" element={<Faculty />} />
             <Route path="/student/media" element={<Media />} />
             <Route path="/student/contact" element={<Contact />} />
+            <Route path="/student/portal" element={<StudentPortal />} />
 
             {/* Investor Routes */}
             <Route path="/investor" element={<InvestorHome />} />

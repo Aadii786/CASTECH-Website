@@ -12,21 +12,29 @@ interface NavItem {
 
 const studentNav: NavItem[] = [
   { label: 'Home', href: '/student' },
+  { label: 'About Castech', href: '/student/about' },
   { 
-    label: 'About', 
-    href: '/student/about',
+    label: 'Programs', 
+    href: '/student/programs',
     children: [
-      { label: 'Mission & Vision', href: '/student/about#mission' },
-      { label: 'Leadership', href: '/student/about#leadership' },
-      { label: 'History', href: '/student/about#history' },
+      { label: 'ADP in Accounting and Finance', href: '/student/programs#adp-af' },
+      { label: 'ADP in Business Administration and Commerce', href: '/student/programs#adp-bac' },
+      { label: 'ADP in Digital Marketing', href: '/student/programs#adp-dm' },
+      { label: 'ADP in Media and Communication Studies', href: '/student/programs#adp-mcs' },
+      { label: 'ADP in Computer Science', href: '/student/programs#adp-cs' },
+      { label: 'ADP in Information Technology Management', href: '/student/programs#adp-itm' },
+      { label: 'ADP in Software Engineering', href: '/student/programs#adp-se' },
+      { label: 'ADP in Artificial Intelligence', href: '/student/programs#adp-ai' },
+      { label: 'ADP Graphic Design', href: '/student/programs#adp-gd' },
+      { label: 'ADP Fashion Design', href: '/student/programs#adp-fd' },
+      { label: 'ADP English', href: '/student/programs#adp-eng' },
+      { label: 'ADP Psychology', href: '/student/programs#adp-psy' },
+      { label: 'ADP Paralegal Studies', href: '/student/programs#adp-pls' },
+      { label: 'ADP Data Science', href: '/student/programs#adp-ds' },
     ]
   },
-  { label: 'Programs', href: '/student/programs' },
-  { label: 'Admissions', href: '/student/admissions' },
-  { label: 'Student Life', href: '/student/life' },
   { label: 'Faculty', href: '/student/faculty' },
-  { label: 'Media', href: '/student/media' },
-  { label: 'Contact', href: '/student/contact' },
+  { label: 'Contact Us', href: '/student/contact' },
 ];
 
 const investorNav: NavItem[] = [
@@ -61,9 +69,24 @@ export default function Navbar() {
   return (
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+      isScrolled ? "bg-white shadow-md" : "bg-white/90 backdrop-blur-md"
     )}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Top Bar */}
+      <div className="bg-castech-dark-blue text-white py-2 hidden lg:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-[10px] font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-2"><Globe className="w-3 h-3" /> UMT Lahore Campus</span>
+            <span className="flex items-center gap-2">Email: info@umt.edu.pk</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link to="/student/portal" className="hover:text-castech-yellow transition-colors">Student Portal</Link>
+            <span className="text-white/30">|</span>
+            <Link to="/investor" className="hover:text-castech-yellow transition-colors">Investor Relations</Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
             <div className="flex flex-col">
@@ -87,16 +110,21 @@ export default function Navbar() {
                   {item.children && <ChevronDown className="w-4 h-4" />}
                 </Link>
                 {item.children && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        to={child.href}
-                        className="block px-4 py-2 text-sm text-castech-black hover:bg-gray-50 hover:text-castech-blue"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-white shadow-2xl rounded-lg py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 grid grid-cols-1 gap-1">
+                    <div className="px-4 py-2 border-b border-gray-100 mb-2">
+                      <span className="text-xs font-bold text-castech-dark-blue uppercase tracking-widest">Associate Degree Programs</span>
+                    </div>
+                    <div className="max-h-[60vh] overflow-y-auto">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          to={child.href}
+                          className="block px-4 py-2 text-[13px] text-gray-700 hover:bg-gray-50 hover:text-castech-blue transition-colors flex items-center gap-2"
+                        >
+                          <span className="text-castech-blue">›</span> {child.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

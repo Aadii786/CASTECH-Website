@@ -2,12 +2,12 @@ import { motion } from 'motion/react';
 import { Mail, Linkedin, Globe, Search } from 'lucide-react';
 
 const faculty = [
-  { name: "Dr. Sarah Jenkins", role: "President & Professor of Ethics", dept: "Leadership", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
-  { name: "Prof. Michael Chen", role: "Rector & Professor of Computer Science", dept: "Technology", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" },
-  { name: "Dr. Elena Rodriguez", role: "Dean of Arts", dept: "Arts", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400" },
-  { name: "Dr. James Wilson", role: "Head of Biotechnology", dept: "Science", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400" },
-  { name: "Prof. Lisa Wang", role: "Senior Lecturer in Digital Media", dept: "Arts", img: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400" },
-  { name: "Dr. Robert Taylor", role: "Professor of Artificial Intelligence", dept: "Technology", img: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80&w=400" },
+  { name: "Dr. Muhammad Aslam", role: "Rector & Professor", dept: "Leadership", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" },
+  { name: "Dr. Muhammad Azeem Naz", role: "Dean & Professor", dept: "Leadership", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" },
+  { name: "Prof. Dr. Naveed Malik", role: "Head of Computer Science", dept: "Technology", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400" },
+  { name: "Dr. Saima Rashid", role: "Associate Professor", dept: "Science", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400" },
+  { name: "Mr. Ahmed Ali", role: "Senior Lecturer", dept: "Arts", img: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80&w=400" },
+  { name: "Ms. Fatima Zahra", role: "Lecturer", dept: "Technology", img: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400" },
 ];
 
 export default function Faculty() {
